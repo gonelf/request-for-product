@@ -1,0 +1,41 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery-dateformat.min.js"></script>
+<script type="text/javascript" src="./xml2json.min.js"></script>
+
+<script  type="text/javascript">
+  function getPreviousMonday()
+  {
+      var date = new Date();
+      var day = date.getDay();
+      var prevMonday;
+      if(date.getDay() == 0){
+          prevMonday = new Date().setDate(date.getDate() - 7);
+      }
+      else{
+          prevMonday = new Date().setDate(date.getDate() - day);
+      }
+
+      return $.format.date(prevMonday, "yyyy-MM-dd");
+  }
+
+  function getFeedFromLastMonday() {
+    var last_monday = getPreviousMonday();
+    var url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fqueryfeed.net%2Ftw%3Fq%3D%2522request%2Bfor%2Bproduct%2522%2B-filter%253Areplies%2Bsince%253A"+last_monday
+    $.ajax({
+      type: 'GET',
+      url: url,
+      dataType: 'jsonp',
+      success: function(data) {
+        console.log(data.feed.description);
+        console.log(data);
+        var x2js = new X2JS();
+        console.log(data["items"])
+        var xmlAsStr = x2js.json2xml_str( data );
+        console.log(xmlAsStr)
+        $("html").replaceWith($('<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel>' + xmlAsStr + '</channel></rss>'));
+      }
+    });
+  }
+  getFeedFromLastMonday()
+
+</script>
