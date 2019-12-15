@@ -13,9 +13,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
-if (getUrlParameter("private") == true) {
+if (getUrlParameter("private") == "true") {
   console.log("identified");
-  LogRocket.identify('1', {
+  LogRocket.identify('ADMIN', {
     name: 'gonelf',
     admin: 'true'
   });
