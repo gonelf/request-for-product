@@ -85,7 +85,7 @@
       </div>
       <div class="col-md-6 col-sm-12">
         <br><br>
-          <div class="jumbotron">
+          <div class="jumbotron email_form">
             <div class="form-group" style="font-weight: 300; text-align: center;">
               <h3>Join dozens of people who get product ideas weekly</h3>
             </div>
@@ -103,7 +103,7 @@
             	<input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required style="width: 100%">
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d042dd702542047d097150b11_4230b9b654" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Get product requests" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" style="width: 100%;"></div>
+                <div class="clear"><input type="submit" value="Get Product Ideas" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" style="width: 100%;"></div>
                 </div>
             </form>
             <p>We won't spam you</p>
@@ -111,6 +111,10 @@
 
             <!--End mc_embed_signup-->
 
+          </div>
+          <div class="jumbotron confirmed" style="display: none;">
+            <h3>You're in!</h3>
+            <p>Please check your email and follow the next step.</p>
           </div>
       </div>
     </div>
@@ -134,9 +138,8 @@
 
     </div> <!-- /container -->
 
-    <!-- Start of Async Drift Code -->
     <script src="./js/drift.js"></script>
-    <!-- End of Async Drift Code -->
+    <script src="./js/subscribed.js"></script>
 
   </body>
 </html>
