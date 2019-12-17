@@ -13,10 +13,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
-if (getUrlParameter("private") == "true") {
-  console.log("identified");
-  LogRocket.identify('ADMIN', {
-    name: 'gonelf',
-    admin: 'true'
-  });
+if (getUrlParameter("private") != "true") {
+  $("head").append('<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script><script>window.LogRocket && window.LogRocket.init("vs91x2/request-for-product");</script>')
 }

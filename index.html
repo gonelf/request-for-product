@@ -9,14 +9,12 @@
     <title>Request for Product</title>
 
     <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script -->
 
-    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>window.LogRocket && window.LogRocket.init('vs91x2/request-for-product');</script>
   </head>
 
   <body>
@@ -49,8 +47,16 @@
       </h1>
     </div>
     <div class="row">
+      <div class="offset-md-2 col-md-8 col-sm-12 text-center">
+        <h3>What the heck is a "Request for Product"?</h3>
+        <p>
+          Imagine that you're pissed of with life and you just wish there was a product that could fix it!<br>
+          That's when you go to twitter and post a "Request for Product" and the magic happens.</p>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Why should you subscribe?</h3>
+        <h3 class="text-center"> </h3>
         <br>
         <div class="row">
           <div class="col-md-6 col-sm-12">
@@ -60,6 +66,8 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
+            <br>
+            <h4>Why should you join?</h4>
             <br>
             <h5 style="line-height: 1.5em">
               <image src="images/iconfinder_light-bulb_299054.png" width="25px" style="margin: 0px 5px;" />
@@ -75,7 +83,7 @@
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
-        <br><br><br><br><br>
+        <br><br>
           <div class="jumbotron">
             <div class="form-group" style="font-weight: 300; text-align: center;">
               <h3>Join dozens of people who get product ideas weekly</h3>
@@ -103,16 +111,16 @@
             <!--End mc_embed_signup-->
 
           </div>
-
       </div>
     </div>
+    <hr>
     <div class="row text-center">
-      <div class="col-md-12 col-sm-12">
-        <hr>
-        <h1>Recent issues</h1>
+      <div id="previousIssues" class="offset-md-2 col-md-8 col-sm-12">
+
+        <h1>Recent Product Requests</h1>
         <br>
-        <h3><a href="https://us4.campaign-archive.com/?e=[UNIQID]&u=d042dd702542047d097150b11&id=569dbd0a42" target="_blank">Request for Product (12/12/2019)<a></h3>
-          <br><br>
+        <div id="loading">Loading <img src="./images/loading.gif" /></div>
+        <script src="./js/previousIssues.js"></script>
       </div>
     </div>
     <hr>
@@ -126,6 +134,6 @@
     </div> <!-- /container -->
 
     <script src="./js/logrocket.js"></script>
-    <!--script src="./js/previousIssues.js"></script-->
-</body>
+
+  </body>
 </html>
