@@ -1,145 +1,306 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Request for Product</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get a weekly update on the latest product requests in your inbox">
+    <meta name="author" content="Inovatik">
 
-    <!-- jquery -->
-    <script src="./js/jquery.min.js"></script>
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="Request for Product" /> <!-- website name -->
+	<meta property="og:site" content="https://requestforproduct.xyz" /> <!-- website link -->
+	<meta property="og:title" content="Request for Product - Get a weekly update on the latest product requests in your inbox"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script -->
+    <!-- Website Title -->
+    <title>Request for Product - Get a weekly update on the latest product requests in your inbox</title>
 
-    <script src="./js/logrocket.js"></script>
-  </head>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 
-  <body>
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-
-            </li>
-            <li class="nav-item">
-
-            </li>
-            <li class="nav-item">
-
-            </li>
-          </ul>
-        </nav>
-
-      <h1 class="float: none; text-align: center;">
-        <div>
-          <br>
-          <p class="lead" style="text-align: center;">
-            <span style="font-size: 72px;">Request for Product</span>
-            <p class="lead" style="text-align: center;">Get a weekly update on the latest product requests in your inbox</p>
-          </p>
-          <br>
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
         </div>
-      </h1>
     </div>
-    <div class="row">
-      <div class="offset-md-2 col-md-8 col-sm-12 text-center">
-        <h3>What the heck is a "Request for Product"?</h3>
-        <p>
-          Imagine that you're pissed off with life and you just wish there was a product that could fix it!<br>
-          That's when you go to twitter and post a "Request for Product" and the magic happens.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center"> </h3>
-        <br>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div style="width: 250px; height: 425px; position: relative">
-              <img src="images/preview.gif" width="100%" style="position: absolute; padding: 40px; top: -29px" />
-              <img src="images/iphonex.png" width="100%" style="position: absolute;" />
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <br>
-            <h4>Why should you join?</h4>
-            <br>
-            <h5 style="line-height: 1.5em">
-              <image src="images/iconfinder_light-bulb_299054.png" width="25px" style="margin: 0px 5px;" />
-              Find inspiration for new products.
-            </h5><br>
-            <h5 style="line-height: 1.5em">
-              <image src="images/iconfinder_user-group_285648.png" width="25px" style="margin: 0px 5px;" />
-              Connect with people who share your pains.</h5><br>
-            <h5 style="line-height: 1.5em">
-              <image src="images/iconfinder_search_285651.png" width="25px" style="margin: 0px 5px;" />
-              Find new customers for your products.</h5>
-          </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><span class="navbar-text" style="color: black;">Request for Product</span></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#services">What is it?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#request">Recent Ideas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">Join</a>
+                </li>
+            </ul>
+            <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="http://twitter.com/requestforprod1">
+                        <i class="fas fa-circle fa-stack-2x twitter"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span>
         </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <br><br>
-          <div class="jumbotron email_form">
-            <div class="form-group" style="font-weight: 300; text-align: center;">
-              <h3>Join dozens of people who get product ideas weekly</h3>
-            </div>
-            <!-- Begin Mailchimp Signup Form -->
-            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-            <style type="text/css">
-            	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-            	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-            	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style>
-            <div id="mc_embed_signup" style="background: transparent;">
-            <form action="https://xyz.us4.list-manage.com/subscribe/post?u=d042dd702542047d097150b11&amp;id=4230b9b654" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding: 0px">
-                <div id="mc_embed_signup_scroll">
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
 
-            	<input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required style="width: 100%">
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d042dd702542047d097150b11_4230b9b654" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Get Product Ideas" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" style="width: 100%;"></div>
-                </div>
-            </form>
-            <p>We won't spam you</p>
-            </div>
 
-            <!--End mc_embed_signup-->
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1><span class="turquoise">Request for Product</span></h1>
+                            <p class="p-large">Get a weekly update on the latest product requests in your inbox</p>
+                            <div class="form-container email_form">
+                              <form action="https://xyz.us4.list-manage.com/subscribe/post?u=d042dd702542047d097150b11&amp;id=4230b9b654" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding: 0px">
+                                  <div id="mc_embed_signup_scroll" class="form-group">
 
-          </div>
-          <div class="jumbotron confirmed" style="display: none;">
-            <h3>You're in!</h3>
-            <p>Please check your email and follow the next step.</p>
-          </div>
-      </div>
-    </div>
-    <hr>
-    <div class="row text-center">
-      <div id="previousIssues" class="offset-md-2 col-md-8 col-sm-12">
+                                  	  <input type="email" value="" name="EMAIL" class="email form-control-input" id="mce-EMAIL" placeholder="" required style="width: 100%">
+                                      <label class="label-control" for="mce-EMAIL">Email</label>
+                                      <div class="help-block with-errors"></div>
+                                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d042dd702542047d097150b11_4230b9b654" tabindex="-1" value=""></div>
+                                      <br>
+                                      <div class="clear"><input type="submit" value="SEND ME PRODUCT IDEAS" name="subscribe" id="mc-embedded-subscribe" class="form-control-submit-button disabled" style="width: 100%;"></div>
+                                  </div>
+                                  <div class="form-message">
+                                      <div id="rmsgSubmit" class="h3 text-center hidden"></div>
+                                  </div>
+                              </form>
+                              <p>We won't spam you</p>
+                          </div>
+                          <div class="form-container confirmed" style="display: none;">
+                            <h3>You're in!</h3>
+                            <p>Please check your email and follow the next step.</p>
+                          </div>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <img class="img-fluid" src="images/details-1-office-worker.svg" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
 
-        <h1>Recent Product Requests</h1>
-        <br>
-        <div id="loading">Loading <img src="./images/loading.gif" /></div>
-        <script src="./js/previousIssues.js"></script>
-      </div>
-    </div>
-    <hr>
+    <!-- Services -->
+    <div id="services" class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>What the heck a Request for Product?</h2>
+                    <p class="p-heading p-large">
+                      Imagine that you're pissed of with life and you just wish there was a product that could fix it!<br>
+                      That's when you go to twitter and post a "Request for Product" and the magic happens.
+                    </p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
 
-      <footer class="footer">
-        <p>Created by <a href="http://twitter.com/gonelf" target="_blank">gonelf</a> |
-          <a href="https://requestforproduct.kampsite.co/" target="_blank">Suggest a feature</a> |
-          <a href="https://app.termly.io/document/privacy-policy/dff30238-540c-419b-94da-cb53d52fad96" target="_blank">Privacy Policy</a></p>
-      </footer>
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="card-image" src="images/iconfinder_light-bulb.png" alt="alternative">
+                        <div class="card-body">
+                            <h4 class="card-title">Find inspiration for new products</h4>
+                        </div>
+                    </div>
+                    <!-- end of card -->
 
-    </div> <!-- /container -->
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="card-image" src="images/iconfinder_user-group.png" alt="alternative">
+                        <div class="card-body">
+                            <h4 class="card-title">Connect with people who share your pains</h4>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="card-image" src="images/iconfinder_search.png" alt="alternative">
+                        <div class="card-body">
+                            <h4 class="card-title">Find new customers for your products</h4>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of services -->
+
+    <!-- Request -->
+    <div id="request" class="form-1">
+        <div class="container">
+            <div class="row">
+              <div id="previousIssues" class="offset-md-2 col-md-8 col-sm-12">
+
+                <h1>Recent Product Requests</h1>
+                <br>
+                <div id="loading">Loading <img src="./images/loading.gif" /></div>
+
+              </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of request -->
+
+    <!-- Contact -->
+    <div id="contact" class="form-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Get product ideas right in your inbox</h2>
+                    <div class="offset-md-2 col-md-8">
+                      <div class="form-container email_form">
+                        <form action="https://xyz.us4.list-manage.com/subscribe/post?u=d042dd702542047d097150b11&amp;id=4230b9b654" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding: 0px">
+                            <div id="mc_embed_signup_scroll" class="form-group">
+
+                                <input type="email" value="" name="EMAIL" class="email form-control-input" id="mce-EMAIL" placeholder="" required style="width: 100%">
+                                <label class="label-control" for="mce-EMAIL">Email</label>
+                                <div class="help-block with-errors"></div>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d042dd702542047d097150b11_4230b9b654" tabindex="-1" value=""></div>
+                                <br>
+                                <div class="clear"><input type="submit" value="SEND ME PRODUCT IDEAS" name="subscribe" id="mc-embedded-subscribe" class="form-control-submit-button disabled" style="width: 100%;"></div>
+                            </div>
+                            <div class="form-message">
+                                <div id="rmsgSubmit" class="h3 text-center hidden"></div>
+                            </div>
+                        </form>
+                        <p>We won't spam you</p>
+                      </div>
+                      <div class="form-container confirmed" style="display: none;">
+                        <h3>You're in!</h3>
+                        <p>Please check your email and follow the next step.</p>
+                      </div>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-2 -->
+    <!-- end of contact -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>About Request for Product</h4>
+                        <p>We're passionate about products and ideas.</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Important Links</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <!-- li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Our business partners <a class="turquoise" href="#your-link">startupguide.com</a></div>
+                            </li -->
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Read our <a class="turquoise" href="https://app.termly.io/document/privacy-policy/dff30238-540c-419b-94da-cb53d52fad96" target="_blank">Privacy Policy</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Follow us on</h4>
+                        <span class="fa-stack">
+                            <a href="http://twitter.com/requestforprod1" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © Request for Product - create by <a href="https://twitter.com/gonelf" target="_blank">@gonelf</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
 
     <script src="./js/drift.js"></script>
+    <script src="./js/previousIssues.js"></script>
     <script src="./js/subscribed.js"></script>
 
-  </body>
+</body>
 </html>
